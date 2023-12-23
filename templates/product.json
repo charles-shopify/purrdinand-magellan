@@ -45,13 +45,13 @@
     "9a306d1a-f19e-48f7-9e66-5f9fa259abe8": {
       "type": "three-col-section",
       "settings": {
-        "section_heading": "",
-        "column-1_heading": "",
-        "column-1_description": "",
-        "column-2_heading": "",
-        "column-2_description": "",
-        "column-3_heading": "",
-        "column-3_description": ""
+        "section_heading": "Section Heading",
+        "column-1_heading": "Heading",
+        "column-1_description": "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla nulla libero, ut hendrerit arcu tincidunt nec. Suspendisse lobortis ligula eget est interdum, vel sodales lacus tincidunt. Etiam ultrices lectus risus. Duis gravida dui dolor, ac blandit mi mattis vel. Integer vehicula dui ac venenatis fringilla. Nunc consequat malesuada eros molestie pharetra.",
+        "column-2_heading": "Heading",
+        "column-2_description": "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla nulla libero, ut hendrerit arcu tincidunt nec. Suspendisse lobortis ligula eget est interdum, vel sodales lacus tincidunt. Etiam ultrices lectus risus. Duis gravida dui dolor, ac blandit mi mattis vel. Integer vehicula dui ac venenatis fringilla. Nunc consequat malesuada eros molestie pharetra.",
+        "column-3_heading": "Heading",
+        "column-3_description": "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla nulla libero, ut hendrerit arcu tincidunt nec. Suspendisse lobortis ligula eget est interdum, vel sodales lacus tincidunt. Etiam ultrices lectus risus. Duis gravida dui dolor, ac blandit mi mattis vel. Integer vehicula dui ac venenatis fringilla. Nunc consequat malesuada eros molestie pharetra."
       }
     },
     "1bfd6bb8-1eec-4d1c-a4ca-3b193e57af4a": {
