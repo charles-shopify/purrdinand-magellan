@@ -15,16 +15,13 @@
 
       <div class="variant-picker">
 
-        <span class="variant-title">Background color:</span>
-        <button class="variant light-background">
-          <div class="left-view light-color"></div>
-          <span class="button-text">Light</span>
-        </button>
-
-        <button class="variant dark-background">
-          <div class="left-view dark-color"></div>
-          <span class="button-text">Dark</span>
-        </button>
+        <span class="variant-title">City:</span>
+        <div class="variant-btn-container">
+            <button class="variant-btn">Galle</button>
+            <button class="variant-btn">Colombo</button>
+            <button class="variant-btn">Haguranketha</button>
+            <button class="variant-btn">Thanamalwila</button>
+        </div>
       </div>
 
 
@@ -546,6 +543,18 @@
     font-size: 22px;
     font-weight: 800;
     
+  }
+
+  .variant-btn-container{
+    display:flex;
+  }
+
+  .variant-btn{
+    color:white;
+    background:black;
+    padding:10px 15px;
+    border-radius:20px;
+
   }
   
 
