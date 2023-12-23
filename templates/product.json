@@ -42,18 +42,6 @@
         "padding_bottom": 80
       }
     },
-    "9a306d1a-f19e-48f7-9e66-5f9fa259abe8": {
-      "type": "three-col-section",
-      "settings": {
-        "section_heading": "",
-        "column-1_heading": "",
-        "column-1_description": "",
-        "column-2_heading": "",
-        "column-2_description": "",
-        "column-3_heading": "",
-        "column-3_description": ""
-      }
-    },
     "1bfd6bb8-1eec-4d1c-a4ca-3b193e57af4a": {
       "type": "rich-text",
       "blocks": {
@@ -67,7 +55,7 @@
         "template--16184209572021__1bfd6bb8-1eec-4d1c-a4ca-3b193e57af4a-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla nulla libero, ut hendrerit arcu tincidunt nec. Suspendisse lobortis ligula eget est interdum, vel sodales lacus tincidunt. Etiam ultrices lectus risus. Duis gravida dui dolor, ac blandit mi mattis vel. Integer vehicula dui ac venenatis fringilla. Nunc consequat malesuada eros molestie pharetra. Quisque scelerisque, dolor non vestibulum aliquam, felis risus tincidunt libero, nec pretium dolor orci at nisl. Sed venenatis nunc turpis, nec efficitur lectus dictum sed. Curabitur ornare tempus tellus, eget aliquet magna feugiat sed. Etiam sed orci eros. Sed tincidunt, justo ac lacinia rutrum, lectus nulla tempor arcu, nec rutrum nibh ipsum a sapien. Vestibulum rhoncus mauris sed lacus vehicula convallis.<\/p><p>Vestibulum quis ipsum mollis, molestie sapien sed, gravida justo. Quisque auctor vehicula nulla in luctus. Nunc laoreet iaculis tortor, et scelerisque augue mattis vitae. In id tempor lorem, non tempor odio. Nam rhoncus, sapien eu sodales scelerisque, sem eros condimentum massa, convallis facilisis turpis nisl consectetur velit. Curabitur tempor id lorem id iaculis. Curabitur porttitor odio eget felis lobortis, non condimentum ipsum lobortis. Sed sit amet felis tempus, euismod mi a, tincidunt ligula. Quisque ligula turpis, consequat vel dignissim a, elementum sit amet dui.<\/p>"
           }
         }
       },
@@ -82,6 +70,18 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "9a306d1a-f19e-48f7-9e66-5f9fa259abe8": {
+      "type": "three-col-section",
+      "settings": {
+        "section_heading": "Section Heading",
+        "column-1_heading": "Heading",
+        "column-1_description": "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla nulla libero, ut hendrerit arcu tincidunt nec. Suspendisse lobortis ligula eget est interdum, vel sodales lacus tincidunt. Etiam ultrices lectus risus. Duis gravida dui dolor, ac blandit mi mattis vel. Integer vehicula dui ac venenatis fringilla. Nunc consequat malesuada eros molestie pharetra.",
+        "column-2_heading": "Heading",
+        "column-2_description": "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla nulla libero, ut hendrerit arcu tincidunt nec. Suspendisse lobortis ligula eget est interdum, vel sodales lacus tincidunt. Etiam ultrices lectus risus. Duis gravida dui dolor, ac blandit mi mattis vel. Integer vehicula dui ac venenatis fringilla. Nunc consequat malesuada eros molestie pharetra.",
+        "column-3_heading": "Heading",
+        "column-3_description": "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla nulla libero, ut hendrerit arcu tincidunt nec. Suspendisse lobortis ligula eget est interdum, vel sodales lacus tincidunt. Etiam ultrices lectus risus. Duis gravida dui dolor, ac blandit mi mattis vel. Integer vehicula dui ac venenatis fringilla. Nunc consequat malesuada eros molestie pharetra."
       }
     },
     "3659df11-5212-4cb4-8e4c-be004e2128f5": {
@@ -146,15 +146,15 @@
         "template--16184209572021__026843d9-94c5-4904-a142-6649129dabab-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
             "heading_size": "h1"
           }
         },
         "template--16184209572021__026843d9-94c5-4904-a142-6649129dabab-button-1": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Get Started",
+            "button_link": "shopify:\/\/collections\/all",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -180,8 +180,8 @@
     "9a4f5f38-02b0-4bfd-b8f5-f22ec8f025aa",
     "main",
     "related-products",
-    "9a306d1a-f19e-48f7-9e66-5f9fa259abe8",
     "1bfd6bb8-1eec-4d1c-a4ca-3b193e57af4a",
+    "9a306d1a-f19e-48f7-9e66-5f9fa259abe8",
     "3659df11-5212-4cb4-8e4c-be004e2128f5",
     "a0a30a90-cf02-400a-a8b2-9ebcd4cd80fb",
     "026843d9-94c5-4904-a142-6649129dabab"
