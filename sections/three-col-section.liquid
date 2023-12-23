@@ -1,0 +1,191 @@
+<div class="three-col-section page-width">
+    <div class="title-wrapper  title-wrapper--no-top-margin">
+        <h2 class="title inline-richtext h1">{{ section.settings.section_heading }} </h2>
+    </div>
+    
+    <div class="col-section ">
+        <div class="col-container">
+          <!-- First Row -->
+          <div class="column">
+              <div class="col-img">
+                  <img src="https://cdn.shopify.com/s/files/1/0671/2036/5784/files/1_1.png?v=1701447115" alt="Number_1" srcset="" class="num-img">
+              </div>
+              <div class="col-body">
+                  <div class="col-heading uppercase">
+                      <h3 class="h3 inline-richtext">{{ section.settings.column-1_heading }} </h3>
+                  </div>
+                  <div class="col-text rte">
+                      <p>{{ section.settings.column-1_description }} </p>
+                  </div>
+              </div> 
+          </div>
+          <div class="column">
+              <div class="col-img ">
+                  <img src="https://cdn.shopify.com/s/files/1/0671/2036/5784/files/2_2.png?v=1701447116" alt="Number_2" srcset="" class="num-img">
+              </div>
+              <div class="col-body">
+                  <div class="col-heading uppercase">
+                      <h3 class="h3 inline-richtext">{{ section.settings.column-2_heading }}  </h3>
+                  </div>
+                  <div class="col-text rte">
+                      <p >{{ section.settings.column-2_description }} </p>
+                  </div>
+              </div> 
+          </div>
+        </div>
+    
+        <!-- Second Row -->
+        <div class="centerd-container">
+          <div class="centered-column column">
+              <div class="col-img">
+                  <img src="https://cdn.shopify.com/s/files/1/0671/2036/5784/files/3_69d96036-d473-497f-a06a-427b769dc333.png?v=1701447319" alt="Number_3" srcset="" class="num-img">
+              </div>
+              <div class="col-body">
+                  <div class="col-heading uppercase">
+                      <h3 class="h3 inline-richtext">{{ section.settings.column-3_heading }} </h3>
+                  </div>
+                  <div class="col-text rte">
+                      <p>{{ section.settings.column-3_description }} </p>
+                  </div>
+              </div> 
+          </div>
+        </div>
+      </div>
+</div>
+
+
+{% schema %}
+  {
+  "name": "Three column section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "text",
+      "id": "column-1_heading",
+      "label": "Column-1 Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "column-1_description",
+      "label": "Column-1 Description"
+    },
+    {
+      "type": "text",
+      "id": "column-2_heading",
+      "label": "Column-2 Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "column-2_description",
+      "label": "Column-2 Description"
+    },
+    {
+      "type": "text",
+      "id": "column-3_heading",
+      "label": "Column-3 Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "column-3_description",
+      "label": "Column-3 Description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Code In Shopify Section"
+    }
+  ]
+}  
+{% endschema %}
+
+{% stylesheet %}
+
+    .three-col-section{
+        margin-top: 45px !important;
+        margin-bottom: 65px !important;
+    }
+    .col-container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr); 
+        gap: 15px;
+      }
+
+      .column {
+        position: relative;
+        display: flex;
+        height: auto; 
+        max-height:300px;
+        margin-left: 1rem;
+        
+      }
+
+      .centerd-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 35px;
+      }
+      .centered-column {
+        width: 50%;
+      }
+      .num-img{
+        position: absolute;
+        height: 80px;
+        width: 46px;
+        left:-25px;
+      }
+      /*
+      .col-body{
+        padding-left: 0.5rem;
+        padding-right: 5rem;
+      }
+      
+      .col-heading{
+        font-family: 'OLD SPORT 02 ATHLETIC NCV' !important;
+        font-size: 22px !important;
+        font-weight: 900 !important; 
+        color:#002F63 !important;
+      }*/
+
+      .col-heading > .h3{
+        margin:0.5rem !important;
+        padding:0 !important;
+        font-family: 'OLD SPORT 02 ATHLETIC NCV' !important;
+        font-size: 22px !important;
+        color:#002F63 !important;
+
+      }
+
+      @media only screen and (max-width: 750px) {
+        .centered-column {
+          width: 100%;
+        }
+        .centerd-container { 
+          width: 90%;
+          display: block;
+          margin-top: 15px;
+        }
+        .col-container {
+          display: grid;
+          grid-template-columns: repeat(1,1fr); 
+        }
+        
+        .col-body{
+            padding-right: 4rem;
+          }
+        
+        .column{
+
+            margin-left:5rem;
+        }
+        
+      }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

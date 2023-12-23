@@ -1,0 +1,799 @@
+<section class="main-container page-width">
+  <div class="product-img-container">
+    <img class = "prod-img" src="https://cdn.shopify.com/s/files/1/0671/2036/5784/files/Group2.png?v=1699897861" alt="">
+  </div>
+
+
+  <div class="component-container">
+
+    {% comment %}------------------------------  COMPONENT-1 START -------------------------- {% endcomment %}
+    <div class="component component-1" id="component-1">
+      <h3 class="component-heading">Yearbook Photo Framed</h3>
+      <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+
+      {% comment %} variant pickers {% endcomment %}
+
+      <div class="variant-picker">
+
+        <span class="variant-title">Background color:</span>
+        <button class="variant light-background">
+          <div class="left-view light-color"></div>
+          <span class="button-text">Light</span>
+        </button>
+
+        <button class="variant dark-background">
+          <div class="left-view dark-color"></div>
+          <span class="button-text">Dark</span>
+        </button>
+      </div>
+
+
+      <div class="price-next-prev-container">
+        {% comment %} price {% endcomment %}
+        
+        <div
+          class="no-js-hidden component-price"
+          id="price-{{ section.id }}"
+          role="status"
+          {{ block.shopify_attributes }}>
+          {%- render 'price'
+            ,
+ product: product
+            ,
+ use_variant: true
+            ,
+ show_badges: true
+            ,
+ price_class: 'price--large'
+          -%}
+        </div>
+        {%- if product.quantity_price_breaks_configured? -%}
+          <div class="volume-pricing-note">
+            <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+          </div>
+        {%- endif -%}
+        <div class="product__tax caption rte">
+          {%- if cart.taxes_included -%}
+            {{ 'products.product.include_taxes' | t }}
+          {%- endif -%}
+          {%- if shop.shipping_policy.body != blank -%}
+            {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+          {%- endif -%}
+        </div>
+        <div {{ block.shopify_attributes }}>
+          {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+          {%- form 'product'
+            , product
+            , id: product_form_installment_id
+            , class: 'installment caption-large' -%}
+            <input
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}">
+            {{ form | payment_terms }}
+          {%- endform -%}
+        </div>
+
+        {% comment %} price-end {% endcomment %}
+        <div class="next-prev-btn">
+            <button id="nextBtn1" class="next-btn">Next</button>
+        </div>
+      </div>
+    </div>
+    {% comment %}------------------------------  COMPONENT-1 END -------------------------- {% endcomment %}
+
+    {% comment %}------------------------------  COMPONENT-2 START -------------------------- {% endcomment %}
+    <div class="component component-2" id="component-2">
+      <h3 class="component-heading ">Yearbook Photo Framed</h3>
+      <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+
+      {% comment %} variant pickers {% endcomment %}
+
+      <div class="variant-picker">
+
+        <span class="variant-title">Size</span>
+        <button class="variant">
+          <div class="left-view small-size"></div>
+          <span class="button-text">12*18</span>
+        </button>
+
+        <button class="variant ">
+          <div class="left-view medium-size"></div>
+          <span class="button-text">18*24</span>
+        </button>
+
+        <button class="variant">
+          <div class="left-view large-size"></div>
+          <span class="button-text">24*36</span>
+        </button>
+      </div>
+
+
+      <div class="price-next-prev-container">
+        {% comment %} price {% endcomment %}
+        <div
+          class="no-js-hidden"
+          id="price-{{ section.id }}"
+          role="status"
+          {{ block.shopify_attributes }}>
+          {%- render 'price'
+            ,
+ product: product
+            ,
+ use_variant: true
+            ,
+ show_badges: true
+            ,
+ price_class: 'price--large'
+          -%}
+        </div>
+        {%- if product.quantity_price_breaks_configured? -%}
+          <div class="volume-pricing-note">
+            <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+          </div>
+        {%- endif -%}
+        <div class="product__tax caption rte">
+          {%- if cart.taxes_included -%}
+            {{ 'products.product.include_taxes' | t }}
+          {%- endif -%}
+          {%- if shop.shipping_policy.body != blank -%}
+            {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+          {%- endif -%}
+        </div>
+        <div {{ block.shopify_attributes }}>
+          {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+          {%- form 'product'
+            , product
+            , id: product_form_installment_id
+            , class: 'installment caption-large' -%}
+            <input
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}">
+            {{ form | payment_terms }}
+          {%- endform -%}
+        </div>
+
+        {% comment %} price-end {% endcomment %}
+        <div class="next-prev-btn">
+            <button id="backBtn1"class="back-btn"><i class="fa-solid fa-less-than"></i> &nbsp; Back</button>    
+            <button id="nextBtn2" class="next-btn">Next</button>
+         
+
+        </div>
+      </div>
+
+
+    </div>
+    {% comment %}------------------------------  COMPONENT-2 END -------------------------- {% endcomment %}
+
+    
+    {% comment %}------------------------------  COMPONENT-3 START -------------------------- {% endcomment %}
+
+    <div class="component component-3" id="component-3">
+      <h3 class="component-heading ">Yearbook Photo Framed</h3>
+      <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+
+      {% comment %} variant pickers {% endcomment %}
+
+      <div class="variant-picker">
+
+        <span class="variant-title">Frame:</span>
+        <button class="variant">
+          <div class="left-view frame"></div>
+          <span class="button-text">Frame</span>
+        </button>
+
+        <button class="variant ">
+          <div class="left-view no-frame"></div>
+          <span class="button-text">No Frame</span>
+        </button>
+      </div>
+
+
+      <div class="price-next-prev-container">
+        {% comment %} price {% endcomment %}
+        <div
+          class="no-js-hidden"
+          id="price-{{ section.id }}"
+          role="status"
+          {{ block.shopify_attributes }}>
+          {%- render 'price'
+            ,
+ product: product
+            ,
+ use_variant: true
+            ,
+ show_badges: true
+            ,
+ price_class: 'price--large'
+          -%}
+        </div>
+        {%- if product.quantity_price_breaks_configured? -%}
+          <div class="volume-pricing-note">
+            <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+          </div>
+        {%- endif -%}
+        <div class="product__tax caption rte">
+          {%- if cart.taxes_included -%}
+            {{ 'products.product.include_taxes' | t }}
+          {%- endif -%}
+          {%- if shop.shipping_policy.body != blank -%}
+            {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+          {%- endif -%}
+        </div>
+        <div {{ block.shopify_attributes }}>
+          {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+          {%- form 'product'
+            , product
+            , id: product_form_installment_id
+            , class: 'installment caption-large' -%}
+            <input
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}">
+            {{ form | payment_terms }}
+          {%- endform -%}
+        </div>
+
+        {% comment %} price-end {% endcomment %}
+        <div class="next-prev-btn">
+            <button id="backBtn2"class="back-btn"><i class="fa-solid fa-less-than"></i> &nbsp; Back</button>
+            <button id="nextBtn3" class="next-btn">Next</button>
+     
+
+        </div>
+      </div>
+
+
+    </div>
+    {% comment %}------------------------------  COMPONENT-3 END -------------------------- {% endcomment %}
+
+    {% comment %}------------------------------  COMPONENT-4 START -------------------------- {% endcomment %}
+    <div class=" component component-4" id="component-4">
+
+      <h3 class="component-heading ">Yearbook Photo Framed</h3>
+      <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+
+      {% comment %} variant pickers {% endcomment %}
+
+      <div class="variant-picker">
+
+        <span class="variant-title">Frame Type:</span>
+        <button class="variant">
+          <div class="left-view dusty-pink-frame"></div>
+          <span class="button-text">Dusty Pink</span>
+        </button>
+
+        <button class="variant dark-background">
+          <div class="left-view charcoal-green-frame"></div>
+          <span class="button-text">Charcoal Green</span>
+        </button>
+
+        <button class="variant dark-background">
+          <div class="left-view shiplap-frame"></div>
+          <span class="button-text">Shiplap</span>
+        </button>
+      </div>
+
+
+      <div class="price-next-prev-container">
+        {% comment %} price {% endcomment %}
+        <div
+          class="no-js-hidden"
+          id="price-{{ section.id }}"
+          role="status"
+          {{ block.shopify_attributes }}>
+          {%- render 'price'
+            ,
+ product: product
+            ,
+ use_variant: true
+            ,
+ show_badges: true
+            ,
+ price_class: 'price--large'
+          -%}
+        </div>
+        {%- if product.quantity_price_breaks_configured? -%}
+          <div class="volume-pricing-note">
+            <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+          </div>
+        {%- endif -%}
+        <div class="product__tax caption rte">
+          {%- if cart.taxes_included -%}
+            {{ 'products.product.include_taxes' | t }}
+          {%- endif -%}
+          {%- if shop.shipping_policy.body != blank -%}
+            {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+          {%- endif -%}
+        </div>
+        <div {{ block.shopify_attributes }}>
+          {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+          {%- form 'product'
+            , product
+            , id: product_form_installment_id
+            , class: 'installment caption-large' -%}
+            <input
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}">
+            {{ form | payment_terms }}
+          {%- endform -%}
+        </div>
+
+        {% comment %} price-end {% endcomment %}
+        <div class="next-prev-btn">
+
+            <button id="backBtn3"class="back-btn"><i class="fa-solid fa-less-than"></i> &nbsp; Back</button>
+            <button id="nextBtn4" class="next-btn">Next</button>
+        
+        </div>
+      </div>
+
+    </div>
+    {% comment %}------------------------------  COMPONENT-4 END ----------------------------- {% endcomment %}
+
+    {% comment %}------------------------------  COMPONENT-5 START -------------------------- {% endcomment %}
+    <div class="component component-5" id="component-5">
+
+      <h3 class="component-heading ">Yearbook Photo Framed</h3>
+      <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+      <!-- upload photo -->
+      <div class="image-upload input-container section-container">
+        <input
+          type="file"
+          id="image"
+          name="image"
+          class="img-input-field"
+          accept="image/*"
+          onchange="checkImageUpload()"
+          required>
+        <label id="file-input-label" for="image">
+          <i class="fa-solid fa-upload"></i>
+          Upload your image</label>
+        <div id="uploadMessage"></div>
+      </div>
+
+      <!-- input name -->
+      <div class="name-input input-container">
+        <label for="name" class="lable">Name</label>
+        <br>
+        <input
+          type="text"
+          id="name"
+          name="name">
+      </div>
+
+      <!-- input remarks -->
+      <div class="remark-input input-container">
+
+        <label for="remarks" class="lable">Remarks</label><br>
+        <textarea
+          id="remarks"
+          name="remarks"
+          rows="6"
+          cols="50"></textarea>
+      </div>
+
+
+      <div class="price-next-prev-container">
+        {% comment %} price {% endcomment %}
+        <div
+          class="no-js-hidden"
+          id="price-{{ section.id }}"
+          role="status"
+          {{ block.shopify_attributes }}>
+          {%- render 'price'
+            ,
+ product: product
+            ,
+ use_variant: true
+            ,
+ show_badges: true
+            ,
+ price_class: 'price--large'
+          -%}
+        </div>
+        {%- if product.quantity_price_breaks_configured? -%}
+          <div class="volume-pricing-note">
+            <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+          </div>
+        {%- endif -%}
+        <div class="product__tax caption rte">
+          {%- if cart.taxes_included -%}
+            {{ 'products.product.include_taxes' | t }}
+          {%- endif -%}
+          {%- if shop.shipping_policy.body != blank -%}
+            {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+          {%- endif -%}
+        </div>
+        <div {{ block.shopify_attributes }}>
+          {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+          {%- form 'product'
+            , product
+            , id: product_form_installment_id
+            , class: 'installment caption-large' -%}
+            <input
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}">
+            {{ form | payment_terms }}
+          {%- endform -%}
+        </div>
+
+        {% comment %} price-end {% endcomment %}
+        <div class="next-prev-btn">
+       
+            <button id="backBtn4"class="back-btn"><i class="fa-solid fa-less-than"></i> &nbsp; Back</button>
+            <button id="add-to-cart" class="next-btn">ADD TO CART</button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% comment %}------------------------------  COMPONENT-5 END -------------------------- {% endcomment %}
+
+</section>
+
+
+{% schema %}
+  {
+    "name": "Test",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Test"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+
+  div:empty {
+    display: block !important;
+  }
+  .main-container {
+    display: flex;
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+    font-family: Quatro Slab !important;
+  }
+  .product-img-container {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .component-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .component {
+    width: 100%;
+
+  }
+
+  .price-next-prev-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top:15px;
+
+  }
+
+  .component:not(:first-child) {
+    display: none;
+  }
+
+  .prod-img{
+    width:90%;
+  }
+/*------------------------  ----------------------- VARIANTS STYLES -START- -------------------------------------*/
+  .variant {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 65px;
+    background-color: #D9D9D92B;
+    margin: 10px 0;
+    border-radius: 10px;
+    /* Adjust border-radius for rounded corners   */
+    cursor: pointer;
+    border:1px solid #f0e6e0;
+
+  }
+
+  .variant:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border:1px solid #053061;
+  }
+
+
+  .variant-title {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+
+  .variant-picker {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+    height: auto;
+    text-align: left;
+
+  }
+  .left-view {
+    width: 50px;
+    height: 100%;
+    margin-right: 15px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .component-heading{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 800;
+    
+  }
+  
+
+  /*----------------------------------------------- VARIANTS STYLES --START --------------------------------*/
+
+/*----------------------------------- Next and Back button styles --start-- ----------------------------------*/
+
+.button-text {
+    z-index: 1;
+    text-align: center;
+  }
+.next-btn{
+    border:none;
+    padding: 10px 3rem !important;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #002f63;
+    color: #fff;
+    font-family: "OLD SPORT 02 ATHLETIC NCV"!important;
+    cursor:pointer;
+}
+
+.back-btn{
+    border:none;
+    padding: 10px 3rem !important;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color:white;
+    color:black;
+    cursor:pointer;
+
+   
+}
+
+
+.next-btn:after{
+  box-shadow:none !important;
+}
+/*------------------------------- Next and Back button styles --start-- - ------------------------------------*/
+
+/*---------------------------------- background color variant picker --start-- -------------------------------*/
+
+
+  .light-color {
+    background-color: #f0e6e0;
+  }
+  .dark-color {
+    background-color: #053061;
+  }
+
+/*---------------------------------------- background color variant picker --end------------------------------*/
+  
+/*--------------------------------------- size variant ----------------------------------------------------------*/
+.small-size{
+  background-image:url('https://cdn.shopify.com/s/files/1/0671/2036/5784/files/Rectangle_4_1.png?v=1702090844');
+  background-size:cover;
+}
+
+.medium-size{
+  background-image:url('https://cdn.shopify.com/s/files/1/0671/2036/5784/files/Rectangle_6_2.png?v=1702090971');
+  background-size:cover;
+}
+
+.large-size{
+  background-image:url('https://cdn.shopify.com/s/files/1/0671/2036/5784/files/Rectangle_7.png?v=1702090943');
+  background-size:cover;
+}
+
+
+
+
+/*-------------------------------------- size variant end-------------------------------------------------------*/
+
+
+/*-------------------------------------- frame start ------------------------------------------------------------*/
+.frame{
+  background-image:url('https://cdn.shopify.com/s/files/1/0671/2036/5784/files/Rectangle_4_3.png?v=1702090935');
+  background-size:cover;
+}
+
+.no-frame{
+  background-image:url('https://cdn.shopify.com/s/files/1/0671/2036/5784/files/Rectangle_6_3.png?v=1702180737');
+  background-size:cover;
+}
+/*-------------------------------------- frame  end ------------------------------------------------------------*/
+
+
+/*-------------------------------------- frame type start-------------------------------------------------------*/
+.dusty-pink-frame{
+  background-image:url('https://cdn.shopify.com/s/files/1/0671/2036/5784/files/Rectangle_4_2.png?v=1702090935');
+  background-size:cover;
+}
+
+.charcoal-green-frame{
+  background-image:url('https://cdn.shopify.com/s/files/1/0671/2036/5784/files/Rectangle_6_1.png?v=1702090935');
+  background-size:cover;
+}
+
+.shiplap-frame{
+  background-image:url('https://cdn.shopify.com/s/files/1/0671/2036/5784/files/Rectangle_2.png?v=1702090935');
+  background-size:cover;
+}
+
+/*-------------------------------------- frame type end-------------------------------------------------------*/
+
+
+/*------------------- image-input / name-input / remark-input styles --start-- ---------------------------------*/
+  
+
+#image{
+    display: none;
+}
+
+.img-input-field{
+    width: 100%;
+    text-align: center;
+}
+#file-input-label {
+        display:block;
+        text-align:center;
+        padding: 5px 70px;
+        background-color:#D9D9D92B;
+        color: #000000;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: var(--font-heading-family);
+        letter-spacing: 1.5px;
+        border: 1px solid black;
+}
+
+
+
+.input-container{
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+    min-width: 100%;
+   
+}
+
+#name{
+    width: 100%;
+    margin: 10px 0;
+    line-height: 2;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:#D9D9D92B;
+}
+
+#remarks{
+    width: 100%;
+    margin: 10px 0;
+    line-height: 1.3;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:#D9D9D92B;
+}
+textarea{
+    resize: none;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+    box-shadow:none !important;
+}
+
+/*------------------- image-input / name-input / remark-input styles --end-- -------------------------*/
+
+/*----------------------------------- styels for mobile de vices --start-- ------------------------------*/
+
+@media only screen and (max-width: 767px) {
+  .main-container{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .product-img-container{
+    min-width:100%;
+  }
+
+  .component-container{
+    margin-top:25px;
+    width:100%;
+  }
+
+  .component{
+    width:90%;
+    text-align:center;
+  }
+
+  .prod-img{
+    width:90%;
+  }
+}
+
+/*----------------------------------- styels for mobile devices --start-- ------------------------------*/
+
+
+{% endstylesheet %}
+
+{% javascript %}
+
+
+  let currentComponent = 1;
+
+  allComponents = document.querySelectorAll('.component');
+
+  function showCurrentComponent() {
+
+    allComponents.forEach(component => {
+      component.style.display = 'none';
+
+    });
+
+    document.querySelector(`#component-${currentComponent}`).style.display = 'block';
+
+  }
+
+  function handleNextClick(event) {
+    if (currentComponent < 5) {
+      event.preventDefault();
+      currentComponent++;
+      showCurrentComponent();
+
+    }
+
+  }
+
+  function handleBackClick(event) {
+    if (currentComponent > 1) {
+      event.preventDefault();
+      currentComponent--;
+      showCurrentComponent();
+    }
+  }
+
+
+  document.getElementById('nextBtn1').addEventListener('click', handleNextClick);
+  document.getElementById('nextBtn2').addEventListener('click', handleNextClick);
+  document.getElementById('nextBtn3').addEventListener('click', handleNextClick);
+  document.getElementById('nextBtn4').addEventListener('click', handleNextClick);
+
+
+  document.getElementById('backBtn1').addEventListener('click', handleBackClick);
+  document.getElementById('backBtn2').addEventListener('click', handleBackClick);
+  document.getElementById('backBtn3').addEventListener('click', handleBackClick);
+  document.getElementById('backBtn4').addEventListener('click', handleBackClick);
+
+
+  showCurrentComponent();
+{% endjavascript %}
