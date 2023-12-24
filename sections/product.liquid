@@ -546,8 +546,11 @@
   }
 
   .variant-btn-container{
-    display:flex;
-    justify-content:space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
   }
 
   .variant-btn{
@@ -560,9 +563,6 @@
 
   }
 
-  .variant-btn:not(:last-child){
-    margin-right:20px
-  }
   .variant-btn:after{
   box-shadow:none !important;
 }
