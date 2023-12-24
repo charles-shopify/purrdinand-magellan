@@ -225,7 +225,7 @@
         {% comment %} price-end {% endcomment %}
         <div class="next-prev-btn">
             <button id="backBtn2"class="back-btn"><i class="fa-solid fa-less-than"></i> &nbsp; Back</button>
-            <button id="nextBtn3" class="next-btn">Next</button>
+            <button id="add-to-cart" class="next-btn">ADD TO CART</button>
      
 
         </div>
@@ -235,91 +235,7 @@
     </div>
     {% comment %}------------------------------  COMPONENT-3 END -------------------------- {% endcomment %}
 
-    {% comment %}------------------------------  COMPONENT-4 START -------------------------- {% endcomment %}
-    <div class=" component component-4" id="component-4">
 
-      <h3 class="component-heading ">Yearbook Photo Framed</h3>
-      <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-
-      {% comment %} variant pickers {% endcomment %}
-
-      <div class="variant-picker">
-
-        <span class="variant-title">Frame Type:</span>
-        <button class="variant">
-          <div class="left-view dusty-pink-frame"></div>
-          <span class="button-text">Dusty Pink</span>
-        </button>
-
-        <button class="variant dark-background">
-          <div class="left-view charcoal-green-frame"></div>
-          <span class="button-text">Charcoal Green</span>
-        </button>
-
-        <button class="variant dark-background">
-          <div class="left-view shiplap-frame"></div>
-          <span class="button-text">Shiplap</span>
-        </button>
-      </div>
-
-
-      <div class="price-next-prev-container">
-        {% comment %} price {% endcomment %}
-        <div
-          class="no-js-hidden"
-          id="price-{{ section.id }}"
-          role="status"
-          {{ block.shopify_attributes }}>
-          {%- render 'price'
-            ,
- product: product
-            ,
- use_variant: true
-            ,
- show_badges: true
-            ,
- price_class: 'price--large'
-          -%}
-        </div>
-        {%- if product.quantity_price_breaks_configured? -%}
-          <div class="volume-pricing-note">
-            <span>{{ 'products.product.volume_pricing.note' | t }}</span>
-          </div>
-        {%- endif -%}
-        <div class="product__tax caption rte">
-          {%- if cart.taxes_included -%}
-            {{ 'products.product.include_taxes' | t }}
-          {%- endif -%}
-          {%- if shop.shipping_policy.body != blank -%}
-            {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-          {%- endif -%}
-        </div>
-        <div {{ block.shopify_attributes }}>
-          {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
-          {%- form 'product'
-            , product
-            , id: product_form_installment_id
-            , class: 'installment caption-large' -%}
-            <input
-              type="hidden"
-              name="id"
-              value="{{ product.selected_or_first_available_variant.id }}">
-            {{ form | payment_terms }}
-          {%- endform -%}
-        </div>
-
-        {% comment %} price-end {% endcomment %}
-        <div class="next-prev-btn">
-
-            <button id="backBtn3"class="back-btn"><i class="fa-solid fa-less-than"></i> &nbsp; Back</button>
-            <button id="add-to-cart" class="next-btn">ADD TO CART</button>
-
-        
-        </div>
-      </div>
-
-    </div>
-    {% comment %}------------------------------  COMPONENT-4 END ----------------------------- {% endcomment %}
 
    
 
