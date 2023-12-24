@@ -88,22 +88,14 @@
 
       <div class="variant-picker">
 
-        <span class="variant-title">Size</span>
-        <button class="variant">
-          <div class="left-view small-size"></div>
-          <span class="button-text">12*18</span>
-        </button>
-
-        <button class="variant ">
-          <div class="left-view medium-size"></div>
-          <span class="button-text">18*24</span>
-        </button>
-
-        <button class="variant">
-          <div class="left-view large-size"></div>
-          <span class="button-text">24*36</span>
-        </button>
+      <span class="variant-title">City:</span>
+      <div class="variant-btn-container">
+          <button class="variant-btn">Galle</button>
+          <button class="variant-btn">Colombo</button>
+          <button class="variant-btn">Haguranketha</button>
+          <button class="variant-btn">Thanamalwila</button>
       </div>
+    </div>
 
 
       <div class="price-next-prev-container">
@@ -175,16 +167,13 @@
 
       <div class="variant-picker">
 
-        <span class="variant-title">Frame:</span>
-        <button class="variant">
-          <div class="left-view frame"></div>
-          <span class="button-text">Frame</span>
-        </button>
-
-        <button class="variant ">
-          <div class="left-view no-frame"></div>
-          <span class="button-text">No Frame</span>
-        </button>
+        <span class="variant-title">City:</span>
+        <div class="variant-btn-container">
+            <button class="variant-btn">Galle</button>
+            <button class="variant-btn">Colombo</button>
+            <button class="variant-btn">Haguranketha</button>
+            <button class="variant-btn">Thanamalwila</button>
+        </div>
       </div>
 
 
@@ -323,7 +312,8 @@
         <div class="next-prev-btn">
 
             <button id="backBtn3"class="back-btn"><i class="fa-solid fa-less-than"></i> &nbsp; Back</button>
-            <button id="nextBtn4" class="next-btn">Next</button>
+            <button id="add-to-cart" class="next-btn">ADD TO CART</button>
+
         
         </div>
       </div>
@@ -331,106 +321,7 @@
     </div>
     {% comment %}------------------------------  COMPONENT-4 END ----------------------------- {% endcomment %}
 
-    {% comment %}------------------------------  COMPONENT-5 START -------------------------- {% endcomment %}
-    <div class="component component-5" id="component-5">
-
-      <h3 class="component-heading ">Yearbook Photo Framed</h3>
-      <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-      <!-- upload photo -->
-      <div class="image-upload input-container section-container">
-        <input
-          type="file"
-          id="image"
-          name="image"
-          class="img-input-field"
-          accept="image/*"
-          onchange="checkImageUpload()"
-          required>
-        <label id="file-input-label" for="image">
-          <i class="fa-solid fa-upload"></i>
-          Upload your image</label>
-        <div id="uploadMessage"></div>
-      </div>
-
-      <!-- input name -->
-      <div class="name-input input-container">
-        <label for="name" class="lable">Name</label>
-        <br>
-        <input
-          type="text"
-          id="name"
-          name="name">
-      </div>
-
-      <!-- input remarks -->
-      <div class="remark-input input-container">
-
-        <label for="remarks" class="lable">Remarks</label><br>
-        <textarea
-          id="remarks"
-          name="remarks"
-          rows="6"
-          cols="50"></textarea>
-      </div>
-
-
-      <div class="price-next-prev-container">
-        {% comment %} price {% endcomment %}
-        <div
-          class="no-js-hidden"
-          id="price-{{ section.id }}"
-          role="status"
-          {{ block.shopify_attributes }}>
-          {%- render 'price'
-            ,
- product: product
-            ,
- use_variant: true
-            ,
- show_badges: true
-            ,
- price_class: 'price--large'
-          -%}
-        </div>
-        {%- if product.quantity_price_breaks_configured? -%}
-          <div class="volume-pricing-note">
-            <span>{{ 'products.product.volume_pricing.note' | t }}</span>
-          </div>
-        {%- endif -%}
-        <div class="product__tax caption rte">
-          {%- if cart.taxes_included -%}
-            {{ 'products.product.include_taxes' | t }}
-          {%- endif -%}
-          {%- if shop.shipping_policy.body != blank -%}
-            {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-          {%- endif -%}
-        </div>
-        <div {{ block.shopify_attributes }}>
-          {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
-          {%- form 'product'
-            , product
-            , id: product_form_installment_id
-            , class: 'installment caption-large' -%}
-            <input
-              type="hidden"
-              name="id"
-              value="{{ product.selected_or_first_available_variant.id }}">
-            {{ form | payment_terms }}
-          {%- endform -%}
-        </div>
-
-        {% comment %} price-end {% endcomment %}
-        <div class="next-prev-btn">
-       
-            <button id="backBtn4"class="back-btn"><i class="fa-solid fa-less-than"></i> &nbsp; Back</button>
-            <button id="add-to-cart" class="next-btn">ADD TO CART</button>
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-{% comment %}------------------------------  COMPONENT-5 END -------------------------- {% endcomment %}
+   
 
 </section>
 
