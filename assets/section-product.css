@@ -118,6 +118,7 @@ div:empty {
     color:black;
     background:white;
     border: 1px solid;
+    transition: 1s ease;
 
 }
   
