@@ -34,7 +34,7 @@ function handleBackClick(event) {
   }
 }
 
-
+  
 document.querySelector('#nextBtn1').addEventListener('click', handleNextClick);
 document.querySelector('#nextBtn2').addEventListener('click', handleNextClick);
 
