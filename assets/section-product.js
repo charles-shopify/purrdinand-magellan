@@ -21,7 +21,7 @@ function handleNextClick(event) {
     
 
   }
-  console.log("HEllo")
+
 
 }
 
@@ -41,8 +41,8 @@ document.querySelector('#nextBtn2').addEventListener('click', handleNextClick);
 
 
 
-document.getElementById('backBtn1').addEventListener('click', handleBackClick);
-document.getElementById('backBtn2').addEventListener('click', handleBackClick);
+document.querySelector('#backBtn1').addEventListener('click', handleBackClick);
+document.querySelector('#backBtn2').addEventListener('click', handleBackClick);
 
 
 
