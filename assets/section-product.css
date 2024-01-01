@@ -101,6 +101,7 @@ div:empty {
   } 
 
   .variant-btn{
+    box-sizing: border-box;
     color:white;
     background:black;
     padding:10px 15px;
