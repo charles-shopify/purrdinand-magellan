@@ -31,7 +31,7 @@ function handleBackClick(event) {
     currentComponent--;
     showCurrentComponent();
    
-  }
+  }   
 }
 
 
