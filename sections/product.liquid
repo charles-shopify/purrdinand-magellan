@@ -158,27 +158,6 @@ function checkImageUpload() {
         });
       });
 
-  let selectedButton = document.querySelector('.variant.selected');
-  let selectedLocation = selectedButton.getAttribute("data-value");
-  let prompt;
-   
-    switch (selectedLocation) {
-      case "London":
-        prompt = "Pet in London";
-        break;
-      case "Paris":
-        prompt = "Pet in Paris";
-        break;
-      case "New York":
-        prompt ="Pet in New York";
-        break;
-      case "Tokyo":
-        prompt ="Pet in Tokyo";
-        break;
-    }
- 
-
-  console.log(prompt);
 
   async function generateImage() {
     loaderDiv.style.display = "block";
@@ -192,16 +171,16 @@ function checkImageUpload() {
    
     switch (selectedLocation) {
       case "London":
-        prompt = "Pet in London";
+        prompt = "London";
         break;
       case "Paris":
-        prompt = "Pet in Paris";
+        prompt = "Paris";
         break;
       case "New York":
-        prompt ="Pet in New York";
+        prompt ="New York";
         break;
       case "Tokyo":
-        prompt ="Pet in Tokyo";
+        prompt ="Tokyo";
         break;
     }
  
