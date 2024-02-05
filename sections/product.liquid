@@ -185,6 +185,28 @@ function checkImageUpload() {
     responseMessage.style.display = "block";
     const imageInput = document.getElementById("image");
     console.log('clicked')
+
+     let selectedButton = document.querySelector('.variant.selected');
+    let selectedLocation = selectedButton.getAttribute("data-value");
+    let prompt;
+   
+    switch (selectedLocation) {
+      case "London":
+        prompt = "Pet in London";
+        break;
+      case "Paris":
+        prompt = "Pet in Paris";
+        break;
+      case "New York":
+        prompt ="Pet in New York";
+        break;
+      case "Tokyo":
+        prompt ="Pet in Tokyo";
+        break;
+    }
+ 
+
+  console.log(prompt);
     
     const formData = new FormData();
 
